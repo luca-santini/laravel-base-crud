@@ -13,11 +13,11 @@ class StudentsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i=0; $i < ; $i++) {
+        for ($i=0; $i < 10 ; $i++) {
             $new_student = new Student();
-            $new_student->name = $faker->name;
-            $new_student->surname = $faker->name;
-            $new_student->email = $faker->unique()->safeEmail;
+            $new_student->name = $faker->firstName;
+            $new_student->surname = $faker->lastName;
+            $new_student->email = $faker->email;
             $new_student->save();
 
         }
